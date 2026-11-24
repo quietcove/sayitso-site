@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Get SayItSo</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<script>
+// One link for ads: sends each phone straight to its own store.
+(function () {
+  var q = new URLSearchParams(location.search);
+  var camp = (q.get('c') || 'ig_ad').replace(/[^\w-]/g, '').slice(0, 40);
+  var ua = navigator.userAgent || '';
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/i.test(ua);
+  var ios = 'https://apps.apple.com/app/id6831498348';
+  var play = 'https://play.google.com/store/apps/details?id=com.miraenangdok.app&referrer=' +
+    encodeURIComponent('utm_source=instagram&utm_medium=paid&utm_campaign=' + camp);
+  if (isIOS) location.replace(ios);
+  else if (isAndroid) location.replace(play);
+  else location.replace('/');
+})();
+</script>
+</head>
+<body style="font-family:system-ui,sans-serif;text-align:center;padding:48px 16px">
+<p>Opening the store…</p>
+<p><a href="https://apps.apple.com/app/id6831498348">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.miraenangdok.app">Google Play</a></p>
+</body>
+</html>
