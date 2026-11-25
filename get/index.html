@@ -14,7 +14,8 @@
   var ua = navigator.userAgent || '';
   var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   var isAndroid = /Android/i.test(ua);
-  var ios = 'https://apps.apple.com/app/id6831498348';
+  // pt/ct = App Store Connect campaign link, so installs show up under Analytics > Campaigns.
+  var ios = 'https://apps.apple.com/app/apple-store/id6831498348?pt=129737723&ct=' + encodeURIComponent(camp) + '&mt=8';
   var play = 'https://play.google.com/store/apps/details?id=com.miraenangdok.app&referrer=' +
     encodeURIComponent('utm_source=instagram&utm_medium=paid&utm_campaign=' + camp);
   if (isIOS) location.replace(ios);
