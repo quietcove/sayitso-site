@@ -16,9 +16,9 @@
   var isAndroid = /Android/i.test(ua);
   // pt/ct = App Store Connect campaign link, so installs show up under Analytics > Campaigns.
   var ios = 'https://apps.apple.com/app/apple-store/id6831498348?pt=129737723&ct=' + encodeURIComponent(camp) + '&mt=8';
-  // c=ig_bio / fb_bio / tt_bio / yt_bio → organic; anything else (bf_test, ig_ad…) → paid.
+  // c=ig_bio / fb_bio / tt_bio / yt_bio / ig_story → organic; anything else (bf_test, ig_ad…) → paid.
   var src = { fb: 'facebook', tt: 'tiktok', yt: 'youtube' }[camp.split('_')[0]] || 'instagram';
-  var medium = /_bio$/.test(camp) ? 'social' : 'paid';
+  var medium = /_(bio|story)$/.test(camp) ? 'social' : 'paid';
   var play = 'https://play.google.com/store/apps/details?id=com.miraenangdok.app&referrer=' +
     encodeURIComponent('utm_source=' + src + '&utm_medium=' + medium + '&utm_campaign=' + camp);
   if (isIOS) location.replace(ios);
