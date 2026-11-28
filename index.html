@@ -2,266 +2,504 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SayItSo · Affirmations, but cute</title>
-<meta name="description" content="Daily affirmations made cute. Listen with Hoku the baby seal and grow a flower in 100 days. Free on iPhone and Android.">
+<meta name="description" content="Daily affirmations made cute. Listen with Hoku the baby seal for three minutes a day and grow a flower in 100 days. Free on iPhone and Android.">
 <meta property="og:title" content="SayItSo · Affirmations, but cute">
 <meta property="og:description" content="Listen with Hoku the baby seal every day, and watch a flower bloom in 100 days.">
 <meta property="og:image" content="https://sayitsoapp.com/assets/og-sayitso.png">
 <meta property="og:url" content="https://sayitsoapp.com/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F5FB">
 <link rel="canonical" href="https://sayitsoapp.com/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&amp;family=Nunito:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&amp;display=swap">
 <style>
-  :root { --ink:#2E2A44; --sub:#5C5775; --navy:#403A66; --lav:#E6E4F4; --sky:#9DBDF8; --sky-d:#6E94DA; --bg:#F7F5FC; --line:#E3E0EF; --pink:#FFB3C7; --green:#3E9E6C; }
-  * { box-sizing:border-box }
-  body { margin:0; background:var(--bg); color:var(--ink); font-family:'Nunito',system-ui,-apple-system,sans-serif; font-size:17px; line-height:1.65 }
-  a { color:var(--navy) }
-  .wrap { max-width:1120px; margin:0 auto; padding-left:max(20px,env(safe-area-inset-left,0px)); padding-right:max(20px,env(safe-area-inset-right,0px)) }
-  h1,h2,h3 { font-family:'Fredoka','Nunito',sans-serif; font-weight:600; letter-spacing:-0.01em; text-wrap:balance; margin:0 }
-  .eyebrow { font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#6A63A0; margin:0 0 12px }
-  header.top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-block:20px }
-  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-family:'Fredoka',sans-serif; font-size:22px; font-weight:600 }
-  .brand img { width:36px; height:36px; border-radius:10px }
-  nav.top a { text-decoration:none; color:var(--sub); font-weight:600; font-size:15px; margin-left:22px }
-  .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:54px; padding:0 28px; border-radius:999px; font-weight:700; font-size:16px; text-decoration:none }
-  .btn.primary { background:var(--navy); color:#fff; box-shadow:0 5px 0 #2B2647 }
-  .btn.ghost { border:1.5px solid #C9C3E8; color:var(--navy); background:#fff }
-  .hero { background:linear-gradient(180deg,var(--lav) 0%, #EFEDF9 100%); }
-  .hero-grid { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:40px; align-items:center; padding-block:clamp(40px,7vw,96px) clamp(48px,8vw,110px) }
-  .hero h1 { font-size:clamp(44px,7vw,84px); line-height:1.02; color:var(--navy) }
-  .hero p.lead { font-size:clamp(18px,2vw,21px); color:var(--sub); max-width:28em; margin:22px 0 0 }
-  .cta { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px }
-  .note { margin-top:16px; font-size:14px; color:var(--sub) }
-  .mongle-stage { position:relative; max-width:420px; margin:0 auto; width:100% }
-  .mongle-stage .halo { position:absolute; inset:6% 4% 0; border-radius:50%; background:var(--sky); opacity:.55 }
-  .mongle-stage .m { position:relative; width:86%; margin:0 auto }
-  .bubble { position:absolute; top:-2%; right:-2%; background:#fff; border-radius:22px 22px 22px 6px; padding:10px 16px; font-family:'Fredoka',sans-serif; font-size:clamp(14px,1.6vw,18px); color:var(--navy); box-shadow:0 8px 24px rgba(64,58,102,.15) }
-  .chips { display:flex; flex-wrap:wrap; gap:10px 28px; padding-block:26px; font-size:15px; color:var(--sub); border-bottom:1px solid var(--line) }
-  .chips b { color:var(--ink) }
-  section.block { padding-block:clamp(64px,9vw,120px) 0 }
-  section.block h2 { font-size:clamp(30px,4vw,48px); line-height:1.12 }
-  .steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:40px }
-  .step { background:#fff; border:1px solid var(--line); border-radius:28px; padding:28px }
-  .step .num { font-family:'Fredoka',sans-serif; width:36px; height:36px; border-radius:50%; background:var(--lav); color:var(--navy); display:flex; align-items:center; justify-content:center; font-weight:600 }
-  .step h3 { font-size:22px; margin-top:16px }
-  .step p { margin:6px 0 0; color:var(--sub) }
-  .step .art { margin-top:18px; height:150px; border-radius:20px; background:var(--bg); display:flex; align-items:center; justify-content:center; overflow:hidden }
-  .line-card { background:#fff; border-radius:14px; padding:8px 12px; font-size:13.5px; width:82%; margin:4px 0; box-shadow:0 2px 0 var(--line) }
-  .garden { background:var(--navy); color:#fff; border-radius:40px; padding:clamp(32px,5vw,64px); display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:36px; align-items:center }
-  .garden h2 { color:#fff }
-  .garden p { color:#D9D5EE; margin:16px 0 0 }
-  .garden img { width:100%; max-width:100%; border-radius:28px; background:#DDE8FE; display:block }
-  .stages { display:flex; flex-wrap:wrap; gap:8px; margin-top:24px }
-  .stages span { padding:6px 14px; border-radius:999px; background:rgba(255,255,255,.1); font-size:14px }
-  .stages span:last-child { background:#fff; color:var(--navy); font-weight:700 }
-  .ny { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); gap:20px; align-items:center; margin-top:36px }
-  .date { background:#fff; border:1px solid var(--line); border-radius:28px; padding:28px; text-align:center }
-  .date b { display:block; font-family:'Fredoka',sans-serif; font-size:clamp(28px,4vw,44px); color:var(--navy); font-weight:600 }
-  .date span { color:var(--sub) }
-  .arrow { font-family:'Fredoka',sans-serif; color:var(--sub); text-align:center; font-size:15px }
-  .tag { display:inline-block; margin-top:22px; padding:8px 16px; border-radius:999px; background:var(--lav); color:var(--navy); font-weight:700 }
-  .plans { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:36px }
-  .plan { background:#fff; border:1px solid var(--line); border-radius:28px; padding:30px }
-  .plan.pro { border:2px solid var(--navy) }
-  .plan h3 { font-size:24px }
-  .plan .price { margin-top:6px; color:var(--sub) }
-  .plan ul { margin:18px 0 0; padding:0; list-style:none; display:grid; gap:10px }
-  .plan li { padding-left:28px; position:relative }
-  .plan li::before { content:""; position:absolute; left:0; top:.45em; width:16px; height:16px; border-radius:50%; background:var(--lav) }
-  .plan.pro li::before { background:var(--sky) }
-  .offer { margin-top:18px; padding:16px 18px; border-radius:18px; background:#FFF4DA; color:#6B4E10; font-size:15px }
-  .faq { max-width:780px; margin:36px auto 0; display:grid; gap:12px }
-  .faq details { background:#fff; border:1px solid var(--line); border-radius:20px; padding:20px 24px }
-  .faq summary { cursor:pointer; font-weight:700; font-size:17px }
-  .faq p { margin:10px 0 0; color:var(--sub) }
-  .final { margin-block:clamp(64px,9vw,120px); background:var(--lav); border-radius:40px; padding:clamp(32px,5vw,64px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:28px }
-  .final .left { display:flex; align-items:center; gap:20px; min-width:0; flex:1 1 380px }
-  .final img { width:80px; height:80px; border-radius:20px; flex:none }
-  .final h2 { font-size:clamp(26px,3vw,36px) }
-  footer { border-top:1px solid var(--line); padding-block:28px 40px; font-size:14px; color:var(--sub) }
-  footer .row { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px 28px }
-  footer a { color:var(--sub) }
-  @media (max-width:820px) {
-    .hero-grid, .garden { grid-template-columns:1fr }
-    .mongle-stage { max-width:300px; order:-1 }
-    .steps, .plans { grid-template-columns:1fr }
-    .ny { grid-template-columns:1fr }
-    nav.top a.hide-sm { display:none }
+  :root{
+    --ink:#1E1B39; --sub:#5F5B7A; --mute:#8D89A6; --bg:#F6F5FB; --card:#FFFFFF; --line:#E7E4F2;
+    --accent:#4F5BEA; --accent-d:#3B45C9; --violet:#6E74FF; --violet2:#8E86FF; --pink:#FF7FA3;
+    --sky1:#5FA8FF; --sky2:#9BCBFF; --sky3:#DCEEFF; --grass1:#9DD886; --grass2:#6EC661;
+    --shadow:0 30px 60px -20px rgba(52,44,120,.28),0 10px 24px -12px rgba(52,44,120,.18);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+  h1,h2,h3{font-weight:900;letter-spacing:-.025em;line-height:1.04;margin:0;text-wrap:balance}
+  .eyebrow{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+  .lead{font-size:clamp(18px,1.6vw,21px);color:var(--sub);margin:20px 0 0;max-width:32em}
+
+  /* nav */
+  .nav{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+  .nav.solid{background:rgba(246,245,251,.78);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);box-shadow:0 1px 0 rgba(30,27,57,.06)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:21px;letter-spacing:-.02em}
+  .brand img{width:34px;height:34px;border-radius:9px}
+  .nav nav{display:flex;align-items:center;gap:26px}
+  .nav nav a{text-decoration:none;font-weight:700;font-size:15px;color:var(--sub)}
+  .nav nav a:hover{color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:44px;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff!important;font-weight:800;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+  .pill:hover{transform:translateY(-1px);box-shadow:0 10px 20px -8px rgba(30,27,57,.5)}
+
+  /* store buttons */
+  .stores{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .store{display:inline-flex;align-items:center;gap:12px;height:62px;padding:0 24px 0 20px;border-radius:18px;background:#121220;color:#fff;text-decoration:none;transition:transform .2s,box-shadow .2s}
+  .store:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(18,18,32,.6)}
+  .store svg{width:26px;height:26px;flex:none}
+  .store small{display:block;font-size:11px;font-weight:700;opacity:.75;line-height:1.1}
+  .store b{display:block;font-size:19px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
+  .store.light{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line) inset,0 0 0 1px var(--line)}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--sky1) 0%,var(--sky2) 48%,var(--sky3) 82%);padding-top:68px;min-height:min(980px,100svh)}
+  .sun{position:absolute;right:9%;top:120px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#FFE27A 48%,rgba(255,226,122,.35) 58%,rgba(255,226,122,0) 72%);animation:pulse 6s ease-in-out infinite}
+  @keyframes pulse{50%{transform:scale(1.06)}}
+  .cloud{position:absolute;background:#fff;border-radius:999px;opacity:.95;filter:drop-shadow(0 10px 18px rgba(40,90,170,.12))}
+  .cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+  .cloud::before{width:55%;height:150%;left:14%;bottom:20%}
+  .cloud::after{width:40%;height:120%;right:12%;bottom:25%}
+  .c1{width:180px;height:52px;left:6%;top:180px;animation:drift 40s linear infinite}
+  .c2{width:120px;height:36px;left:44%;top:120px;opacity:.85;animation:drift 55s linear infinite reverse}
+  .c3{width:150px;height:44px;right:4%;top:360px;opacity:.8;animation:drift 48s linear infinite}
+  @keyframes drift{50%{transform:translateX(60px)}}
+  .hills{position:absolute;inset:auto 0 0;height:300px;pointer-events:none}
+  .hill1,.hill2{position:absolute;bottom:-200px;border-radius:50% 50% 0 0/220px 220px 0 0}
+  .hill1{left:-20%;width:85%;height:420px;background:linear-gradient(180deg,#B9E79F,var(--grass1) 30%)}
+  .hill2{right:-25%;width:95%;height:380px;background:linear-gradient(180deg,#86D26E,var(--grass2) 25%)}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;padding-block:clamp(48px,8vw,110px) 120px}
+  .hero h1{font-size:clamp(52px,8.4vw,112px);color:#fff;text-shadow:0 6px 40px rgba(30,60,150,.25)}
+  .hero .eyebrow{color:#fff;opacity:.9}
+  .hero .lead{color:rgba(255,255,255,.95);text-shadow:0 2px 16px rgba(30,60,150,.2)}
+  .stage{position:relative;height:640px}
+  .stage .phone{position:absolute;right:0;top:10px;width:300px;transform:rotate(4deg);filter:drop-shadow(0 40px 50px rgba(30,40,110,.35));animation:float 7s ease-in-out infinite}
+  @keyframes float{50%{transform:rotate(4deg) translateY(-14px)}}
+  .stage .hoku{position:absolute;left:0;bottom:40px;width:300px;animation:bob 2.6s ease-in-out infinite;transform-origin:50% 92%}
+  @keyframes bob{0%,100%{transform:translateY(0) scale(1,1)}50%{transform:translateY(-14px) scale(.985,1.015)}}
+  .stage .shadow{position:absolute;left:55px;bottom:28px;width:190px;height:30px;border-radius:50%;background:radial-gradient(ellipse,rgba(30,80,40,.3),rgba(30,80,40,0) 70%);animation:shadow 2.6s ease-in-out infinite}
+  @keyframes shadow{50%{transform:scale(.86);opacity:.75}}
+  .bubble{position:absolute;left:40px;bottom:350px;background:#fff;border-radius:26px;padding:14px 22px;font-weight:800;font-size:18px;color:#3A3550;box-shadow:0 12px 30px rgba(40,70,140,.18);white-space:nowrap}
+  .bubble::after{content:"";position:absolute;left:46%;bottom:-9px;width:20px;height:20px;background:#fff;transform:rotate(45deg);border-radius:4px}
+  .bubble span{display:block;transition:opacity .4s}
+
+  /* sections */
+  section{padding-block:clamp(80px,11vw,150px)}
+  .center{text-align:center}
+  .center .lead{margin-inline:auto}
+  h2{font-size:clamp(38px,5.4vw,72px)}
+
+  /* contrast */
+  .contrast{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:56px}
+  .boring,.cute{border-radius:36px;min-height:420px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:36px}
+  .boring{background:#fff;box-shadow:0 0 0 1px var(--line)}
+  .boring .label,.cute .label{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+  .boring .label{color:#B3B0BE}
+  .boring p{font-family:Georgia,'Times New Roman',serif;font-size:clamp(40px,4.4vw,58px);color:#9A97A8;margin:0;text-align:center}
+  .boring .meh{color:#C2C0CC;font-size:15px;text-align:center}
+  .cute{background:linear-gradient(160deg,#6FB0FF,#B6D9FF 60%,#E3F0FF);color:#fff}
+  .cute .label{color:#fff}
+  .cute img{width:230px;margin:0 auto;animation:bob 2.6s ease-in-out infinite;transform-origin:50% 92%}
+  .cute .say{align-self:center;background:#fff;color:#3A3550;border-radius:22px;padding:12px 20px;font-weight:800}
+
+  /* film */
+  .film{background:#14122A;color:#fff;border-radius:48px;margin-inline:max(12px,env(safe-area-inset-left,0px));padding:clamp(48px,7vw,96px) 0;overflow:hidden;position:relative}
+  .film::before{content:"";position:absolute;inset:-30% -10% auto;height:80%;background:radial-gradient(closest-side,rgba(110,116,255,.45),rgba(110,116,255,0));pointer-events:none}
+  .film-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center}
+  .film h2{color:#fff}
+  .film .lead{color:#C9C6E6}
+  .film .eyebrow{color:#A9AEFF}
+  .vphone{position:relative;width:300px;border-radius:46px;background:#000;padding:10px;box-shadow:0 40px 80px -20px rgba(0,0,0,.6),0 0 0 2px #2A2846}
+  .vphone video{display:block;width:100%;border-radius:37px;aspect-ratio:9/16;background:#222;object-fit:cover}
+  .sound{position:absolute;right:22px;bottom:22px;height:40px;padding:0 16px;border-radius:999px;border:0;background:rgba(255,255,255,.92);color:#14122A;font:800 14px 'Nunito',sans-serif;cursor:pointer}
+
+  /* features */
+  .feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+  .feature + .feature{margin-top:clamp(90px,12vw,160px)}
+  .feature.flip .copy{order:2}
+  .shot{position:relative;border-radius:44px;padding:56px 40px;display:flex;justify-content:center;align-items:flex-end;min-height:600px;overflow:hidden}
+  .shot img.ph{width:290px;filter:drop-shadow(0 34px 40px rgba(40,40,110,.28))}
+  .shot.blue{background:linear-gradient(160deg,#DDEBFF,#F3F0FF)}
+  .shot.sky{background:linear-gradient(180deg,#7CB9FF,#CFE6FF)}
+  .shot.pink{background:linear-gradient(160deg,#FFE3EC,#F3EEFF)}
+  .shot.warm{background:linear-gradient(160deg,#FFE9C9,#FFD9E4)}
+  .shot .duo{display:flex;gap:18px;align-items:flex-end}
+  .shot .duo img{width:230px}
+  .shot .duo img:first-child{transform:rotate(-4deg) translateY(10px)}
+  .shot .duo img:last-child{transform:rotate(4deg)}
+  .copy h2{font-size:clamp(36px,4.6vw,60px)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .chips span{padding:8px 16px;border-radius:999px;background:#fff;box-shadow:0 0 0 1px var(--line);font-weight:700;font-size:15px;color:var(--sub)}
+  .chips span.on{background:var(--ink);color:#fff;box-shadow:none}
+  .premium{display:inline-block;margin-left:8px;padding:3px 10px;border-radius:999px;background:linear-gradient(90deg,var(--violet),var(--violet2));color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;vertical-align:middle}
+
+  /* numbers */
+  .numbers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:48px}
+  .num{background:#fff;border-radius:32px;padding:32px 28px;box-shadow:0 0 0 1px var(--line)}
+  .num b{display:block;font-size:clamp(48px,5.6vw,76px);font-weight:900;letter-spacing:-.04em;line-height:1;background:linear-gradient(120deg,var(--accent),var(--violet2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .num span{display:block;margin-top:10px;color:var(--sub);font-weight:700}
+
+  /* new year */
+  .ny{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:24px;align-items:center;margin-top:48px}
+  .date{background:#fff;border-radius:32px;padding:40px 28px;text-align:center;box-shadow:0 0 0 1px var(--line)}
+  .date b{display:block;font-size:clamp(44px,5vw,64px);font-weight:900;letter-spacing:-.03em;line-height:1}
+  .date span{display:block;margin-top:10px;color:var(--sub);font-weight:700}
+  .date.bloom{background:linear-gradient(160deg,#FFE3EC,#FFF3D6);box-shadow:none}
+  .date.bloom b{color:#E0567E}
+  .arrow{color:var(--mute);font-weight:800;text-align:center}
+  .tag{display:inline-block;margin-top:28px;padding:10px 18px;border-radius:999px;background:var(--ink);color:#fff;font-weight:800}
+
+  /* pricing */
+  .plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:56px;text-align:left}
+  .plan{background:#fff;border-radius:36px;padding:40px;box-shadow:0 0 0 1px var(--line)}
+  .plan.pro{background:linear-gradient(160deg,#2A2560,#4B4FD8 70%,#6E74FF);color:#fff;box-shadow:var(--shadow)}
+  .plan h3{font-size:32px}
+  .plan .price{margin-top:8px;color:var(--sub);font-weight:700}
+  .plan.pro .price{color:#D8D6FF}
+  .plan ul{margin:26px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+  .plan li{padding-left:32px;position:relative}
+  .plan li::before{content:"";position:absolute;left:0;top:.3em;width:20px;height:20px;border-radius:50%;background:#EEF0FF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.5' stroke='%234F5BEA' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+  .plan.pro li::before{background-color:rgba(255,255,255,.18);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.5' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+
+  /* faq */
+  .faq{max-width:820px;margin:48px auto 0;display:grid;gap:12px;text-align:left}
+  .faq details{background:#fff;border-radius:24px;padding:22px 28px;box-shadow:0 0 0 1px var(--line)}
+  .faq summary{cursor:pointer;font-weight:800;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:24px;line-height:1;color:var(--accent);transition:transform .2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq p{margin:12px 0 0;color:var(--sub)}
+  .faq a{color:var(--accent)}
+
+  /* final */
+  .final{position:relative;overflow:hidden;border-radius:48px;margin-inline:max(12px,env(safe-area-inset-left,0px));background:radial-gradient(120% 90% at 50% 0%,#8E86FF 0%,#6E74FF 45%,#3F43C9 100%);color:#fff;text-align:center;padding:clamp(72px,9vw,120px) 20px}
+  .final img.icon{width:120px;height:120px;border-radius:28px;margin:0 auto;box-shadow:0 24px 50px rgba(20,16,90,.4)}
+  .final h2{color:#fff;margin-top:28px}
+  .final p{color:rgba(255,255,255,.88);margin:14px 0 0;font-size:20px}
+  .final .stores{justify-content:center}
+  .spark{position:absolute;color:#fff;opacity:.25;font-size:22px;animation:tw 4s ease-in-out infinite}
+  @keyframes tw{50%{opacity:.6;transform:translateY(-6px)}}
+
+  /* interactive */
+  .hoku-btn{position:absolute;left:0;bottom:40px;width:300px;height:300px;padding:0;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .hoku-btn .hk{width:100%;height:100%;animation:bob 2.6s ease-in-out infinite;transform-origin:50% 92%}
+  .hoku-btn.hop .hk{animation:hop .55s cubic-bezier(.3,.7,.4,1)}
+  @keyframes hop{0%{transform:scale(1.08,.9)}35%{transform:translateY(-60px) scale(.95,1.06) rotate(-4deg)}70%{transform:translateY(0) scale(1.06,.93)}100%{transform:none}}
+  .tap-hint{position:absolute;left:96px;bottom:6px;font-weight:800;font-size:14px;color:#fff;background:rgba(30,27,57,.45);padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px);animation:hint 2s ease-in-out infinite}
+  @keyframes hint{50%{transform:translateY(-4px)}}
+  .fx{position:absolute;pointer-events:none;font-size:34px;animation:rise 1.2s ease-out forwards}
+  @keyframes rise{from{opacity:0;transform:translateY(0) scale(.6)}20%{opacity:1}to{opacity:0;transform:translateY(-140px) scale(1.1)}}
+  .voices{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .voice{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 18px 0 8px;border-radius:999px;border:0;background:#fff;box-shadow:0 0 0 1px var(--line);font:800 15px 'Nunito',sans-serif;color:var(--ink);cursor:pointer;transition:transform .15s,box-shadow .2s}
+  .voice:hover{transform:translateY(-1px)}
+  .voice i{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px;color:#fff}
+  .voice.playing{box-shadow:0 0 0 2px var(--accent)}
+  .voice .eq{display:none;gap:2px;align-items:flex-end;height:14px}
+  .voice.playing .eq{display:inline-flex}
+  .voice .eq b{width:3px;background:var(--accent);border-radius:2px;animation:eq .8s ease-in-out infinite}
+  .voice .eq b:nth-child(2){animation-delay:.2s}.voice .eq b:nth-child(3){animation-delay:.4s}
+  @keyframes eq{0%,100%{height:4px}50%{height:14px}}
+  .voice small{font-size:11px;color:var(--violet);font-weight:800}
+  .live{position:relative;border-radius:44px;min-height:600px;overflow:hidden;background:linear-gradient(180deg,#5FA8FF,#9BCBFF 50%,#DCEEFF)}
+  .live .hill1{bottom:-260px;height:420px}
+  .live .hill2{bottom:-280px;height:400px}
+  .live svg.plant{position:absolute;left:50%;bottom:70px;width:min(420px,86%);transform:translateX(-50%)}
+  .live .day{position:absolute;left:50%;top:34px;transform:translateX(-50%);background:rgba(255,255,255,.94);border-radius:999px;padding:10px 26px;font-weight:900;font-size:26px;color:var(--accent);font-variant-numeric:tabular-nums;box-shadow:0 10px 26px rgba(30,60,140,.15);white-space:nowrap}
+  .live .day.done{color:#E0567E}
+  .live .mini{position:absolute;right:9%;bottom:60px;width:120px;animation:bob 2.6s ease-in-out infinite;transform-origin:50% 92%}
+  .live .hint2{position:absolute;left:0;right:0;bottom:16px;text-align:center;font-weight:800;font-size:13px;color:rgba(255,255,255,.95)}
+  .pick{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .pick button{height:46px;padding:0 20px;border-radius:999px;border:0;background:#fff;box-shadow:0 0 0 1px var(--line);font:800 15px 'Nunito',sans-serif;color:var(--sub);cursor:pointer}
+  .pick button.on{background:var(--ink);color:#fff;box-shadow:none}
+  /* intro */
+  #intro{position:fixed;inset:0;z-index:100;overflow:hidden;cursor:pointer;background:radial-gradient(120% 80% at 50% 38%,#8F7CFF 0%,#6474FF 34%,#3B3FB8 70%,#1E1B4D 100%);transition:transform 1.05s cubic-bezier(.75,0,.2,1)}
+  #intro.gone{transform:translateY(-100%)}
+  #intro .aur{position:absolute;inset:-20%;background:conic-gradient(from 200deg at 50% 45%,rgba(255,179,199,.0),rgba(255,179,199,.35),rgba(143,196,255,.35),rgba(185,162,255,.0) 60%);filter:blur(60px);animation:aur 9s linear infinite;opacity:.9}
+  @keyframes aur{to{transform:rotate(360deg)}}
+  #intro .stars{position:absolute;inset:0}
+  #intro .stars i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;animation:tw 3s ease-in-out infinite}
+  #intro .floor{position:absolute;left:-10%;right:-10%;bottom:0;height:34%;background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,0));border-top:1px solid rgba(255,255,255,.22)}
+  #ihoku,#irefl{position:absolute;left:0;top:0;will-change:transform}
+  #irefl{opacity:.28;-webkit-mask:linear-gradient(to top,#000,transparent 65%);mask:linear-gradient(to top,#000,transparent 65%)}
+  #ishadow{position:absolute;left:0;top:0;border-radius:50%;background:radial-gradient(ellipse,rgba(10,8,40,.45),rgba(10,8,40,0) 70%)}
+  .trail{position:absolute;border-radius:50%;background:rgba(255,255,255,.7);pointer-events:none;animation:puff .55s ease-out forwards}
+  @keyframes puff{from{opacity:.8;transform:scale(.4)}to{opacity:0;transform:scale(1.7) translateY(-8px)}}
+  .do{position:absolute;font-weight:900;color:#fff;letter-spacing:.02em;pointer-events:none;animation:doo .65s ease-out forwards}
+  @keyframes doo{from{opacity:0;transform:translateY(6px) scale(.7)}25%{opacity:.95}to{opacity:0;transform:translateY(-24px) scale(1)}}
+  #ilogo{position:absolute;left:0;right:0;top:14vh;text-align:center;font-weight:900;font-size:clamp(76px,17vw,270px);letter-spacing:-.05em;line-height:1;white-space:nowrap}
+  #ilogo span{display:inline-block;opacity:0;transform:translateY(40%) scale(.3);background:linear-gradient(180deg,#FFFFFF 30%,#E6E2FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 18px 40px rgba(20,10,80,.45))}
+  #ilogo.pop span{animation:let .75s cubic-bezier(.2,1.7,.4,1) forwards}
+  @keyframes let{to{opacity:1;transform:none}}
+  #ilogo .shine{position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.75) 50%,transparent 65%);mix-blend-mode:overlay;transform:translateX(-120%);pointer-events:none}
+  #ilogo.pop .shine{animation:shine 1.2s .75s ease-in-out forwards}
+  @keyframes shine{to{transform:translateX(120%)}}
+  .ring{position:absolute;border-radius:50%;border:3px solid rgba(255,255,255,.75);pointer-events:none;animation:ring 1s cubic-bezier(.1,.6,.2,1) forwards}
+  @keyframes ring{from{opacity:1;transform:scale(.1)}to{opacity:0;transform:scale(1)}}
+  .glow{position:absolute;left:50%;width:120vmax;height:120vmax;margin-left:-60vmax;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.32) 0%,rgba(255,220,235,.14) 30%,rgba(255,255,255,0) 60%);opacity:0;transform:scale(.6);transition:opacity .9s,transform 1.2s cubic-bezier(.2,.8,.2,1)}
+  #intro.boom .glow{opacity:1;transform:scale(1)}
+  .spk{position:absolute;color:#fff;pointer-events:none;font-size:22px}
+  .conf{position:absolute;pointer-events:none}
+  #itag{position:absolute;left:0;right:0;text-align:center;font-weight:800;font-size:clamp(20px,2.4vw,32px);color:rgba(255,255,255,.92);opacity:0;transform:translateY(12px);transition:opacity .7s .35s,transform .7s .35s}
+  #ienter{position:absolute;left:0;right:0;margin:0 auto;width:max-content;bottom:max(30px,env(safe-area-inset-bottom,0px));color:#fff;font-weight:800;font-size:15px;letter-spacing:.04em;padding:12px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);backdrop-filter:blur(10px);opacity:0;transition:opacity .6s .6s;white-space:nowrap}
+  #intro.ready #itag{opacity:1;transform:none}
+  #intro.ready #ienter{opacity:1;animation:hint 1.8s 1.2s ease-in-out infinite}
+  #iskip{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:max(16px,env(safe-area-inset-top,0px));border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;font:800 13px 'Nunito',sans-serif;padding:8px 16px;border-radius:999px;cursor:pointer;backdrop-filter:blur(8px)}
+  body.lock{overflow:hidden}
+  footer{padding-block:48px 56px;font-size:14px;color:var(--sub)}
+  footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px}
+  footer a{color:var(--sub)}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+  @media (max-width:900px){
+    .hero-grid,.feature,.film-grid,.contrast,.plans{grid-template-columns:1fr}
+    .feature.flip .copy{order:0}
+    .stage{height:520px;max-width:420px;width:100%;margin:0 auto}
+    .stage .phone{width:230px}
+    .stage .hoku,.hoku-btn{width:230px;height:230px}
+    .tap-hint{left:60px}
+    .live{min-height:520px}
+    .stage .shadow{left:40px;width:150px}
+    .bubble{bottom:260px;left:10px;font-size:16px}
+    .vphone{margin:0 auto;width:min(300px,80vw)}
+    .numbers{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .ny{grid-template-columns:1fr}
+    .shot{min-height:480px;padding:40px 20px}
+    .shot img.ph{width:240px}
+    .shot .duo img{width:min(180px,40vw)}
+    .nav nav a.hide-sm{display:none}
+    .sun{width:96px;height:96px;top:84px;right:-18px}
   }
 </style>
 </head>
 <body>
-<div class="hero">
+
+<div id="intro" aria-label="SayItSo intro. Tap to enter." role="button" tabindex="0">
+  <div class="aur"></div>
+  <div class="stars" id="istars"></div>
+  <div class="glow" id="irays"></div>
+  <div class="floor"></div>
+  <div id="ishadow"></div>
+  <div id="irefl"></div>
+  <div id="ihoku"></div>
+  <div id="ilogo"><span>S</span><span>a</span><span>y</span><span>I</span><span>t</span><span>S</span><span>o</span><div class="shine"></div></div>
+  <div id="itag">Affirmations, but cute.</div>
+  <div id="ienter">Tap anywhere to enter</div>
+  <button id="iskip" type="button">Skip</button>
+</div>
+
+<header class="nav" id="nav">
   <div class="wrap">
-    <header class="top">
-      <a class="brand" href="/"><img src="/assets/sayitso-icon.png" alt="">SayItSo</a>
-      <nav class="top" aria-label="SayItSo"><a class="hide-sm" href="#how">How it works</a><a class="hide-sm" href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
-    </header>
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Free on iPhone &amp; Android</p>
-        <h1>Affirmations, but&nbsp;cute.</h1>
-        <p class="lead">Listen with Hoku the baby seal every day, and watch a flower bloom in 100 days.</p>
-        <div class="cta">
-          <a class="btn primary" href="https://apps.apple.com/app/id6831498348">Download on the App Store</a>
-          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.miraenangdok.app">Get it on Google Play</a>
-        </div>
-        <p class="note">Free to download. Follow <a href="https://www.instagram.com/sayitso.app/">@sayitso.app</a> or <a href="https://www.youtube.com/@sayitsoapp">watch Hoku on YouTube</a>.</p>
+    <a class="brand" href="/"><img src="/assets/sayitso-icon.png" alt="">SayItSo</a>
+    <nav aria-label="SayItSo">
+      <a class="hide-sm" href="#how">How it works</a>
+      <a class="hide-sm" href="#pricing">Pricing</a>
+      <a class="hide-sm" href="#faq">FAQ</a>
+      <a class="pill" href="https://sayitsoapp.com/get?c=web_nav">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="sun"></div>
+  <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+  <div class="hills"><div class="hill1"></div><div class="hill2"></div></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Free on iPhone &amp; Android</p>
+      <h1>Affirmations,<br>but&nbsp;cute.</h1>
+      <p class="lead">Listen with Hoku the baby seal for three minutes a day, and watch your flower bloom in 100&nbsp;days.</p>
+      <div class="stores">
+        <a class="store" href="https://apps.apple.com/app/id6831498348"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.3.8 1.4 0 2.3-1.2 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.8-1-2.8-4.1zM13.9 5.1c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.5-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.5 3.1-1.4z"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.miraenangdok.app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2l10.5 10.5L3.6 23.2c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z" fill="#4FC3F7"/><path d="M17.6 9.2l-3.5 3.5L3.6 2.2c.2-.1.5-.2.8-.1.3 0 .5.1.8.2l12.4 6.9z" fill="#69F0AE"/><path d="M17.6 16.2L5.2 23.1c-.3.1-.5.2-.8.2-.3 0-.6 0-.8-.1l10.5-10.5 3.5 3.5z" fill="#FF5252"/><path d="M21 12.7c0 .5-.3 1-.8 1.3l-2.6 1.5-3.5-3.5 3.5-3.5 2.6 1.5c.5.3.8.8.8 1.3v1.4z" fill="#FFD740"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
       </div>
-      <div class="mongle-stage" aria-hidden="false">
-        <div class="halo"></div>
-        <div class="m"><svg viewBox="2 0 116 116" role="img" aria-label="Hoku the baby seal" style="display:block;width:100%;height:auto"><ellipse cx="22" cy="96" rx="12" ry="7" transform="rotate(-28 22 96)" fill="#C6BEE6"/><ellipse cx="98" cy="96" rx="12" ry="7" transform="rotate(28 98 96)" fill="#C6BEE6"/>
-<ellipse cx="60" cy="66" rx="46" ry="44" fill="#DCD5F2"/>
-<ellipse cx="40" cy="40" rx="9" ry="5" transform="rotate(-20 40 40)" fill="#FFFFFF" opacity=".55"/>
-<circle cx="42" cy="62" r="10" fill="#403A66"/>
-<circle cx="45.5" cy="57.5" r="3.8" fill="#FFFFFF"/>
-<circle cx="78" cy="62" r="10" fill="#403A66"/>
-<circle cx="81.5" cy="57.5" r="3.8" fill="#FFFFFF"/>
-<ellipse cx="26" cy="76" rx="8" ry="5" fill="#FFB3C7"/>
-<ellipse cx="94" cy="76" rx="8" ry="5" fill="#FFB3C7"/>
-<ellipse cx="53.5" cy="79" rx="9" ry="7" fill="#FFFFFF"/>
-<ellipse cx="66.5" cy="79" rx="9" ry="7" fill="#FFFFFF"/>
-<ellipse cx="60" cy="73" rx="4.6" ry="3.3" fill="#403A66"/>
-<path d="M55.5 84 q2.25 2.6 4.5 0 q2.25 2.6 4.5 0" stroke="#403A66" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M60 24 V12" stroke="#3E9E6C" stroke-width="4" stroke-linecap="round"/><ellipse cx="51" cy="11" rx="10" ry="5.5" transform="rotate(-28 51 11)" fill="#5DC08C"/><ellipse cx="69" cy="11" rx="10" ry="5.5" transform="rotate(28 69 11)" fill="#5DC08C"/></svg></div>
-        <div class="bubble">You've got this!</div>
-      </div>
+    </div>
+    <div class="stage" id="stage">
+      <img class="phone" src="/assets/v2/home.webp" alt="">
+      <div class="shadow"></div>
+      <button class="hoku-btn" id="hokuBtn" type="button" aria-label="Tap Hoku"><div class="hk" id="hk"><img src="/assets/v2/hoku.svg" alt="Hoku the baby seal" style="width:100%"></div></button>
+      <span class="tap-hint" id="tapHint">Tap Hoku ✦</span>
+      <div class="bubble"><span id="say">Just 3 minutes together today?</span></div>
     </div>
   </div>
 </div>
 
-<div class="wrap">
-  <div class="chips">
-    <span><b>100-day</b> flower streak</span>
-    <span>Record in <b>your own voice</b></span>
-    <span><b>Sleep mode</b> with calm sounds</span>
-    <span><b>No ads</b></span>
+<section id="why" class="wrap center">
+  <p class="eyebrow rv">Why SayItSo</p>
+  <h2 class="rv">Affirmations can feel<br>a little boring.</h2>
+  <p class="lead rv">So we made them cute. Same kind words, now with a tiny friend who listens with you and a flower that grows every day you show up.</p>
+  <div class="contrast">
+    <div class="boring rv">
+      <span class="label">Most affirmation apps</span>
+      <p>I am enough.</p>
+      <span class="meh">Easy to skip. Easy to forget.</span>
+    </div>
+    <div class="cute rv">
+      <span class="label">SayItSo</span>
+      <img src="/assets/v2/hoku.svg" alt="Hoku the baby seal">
+      <span class="say">I talk to myself with kindness.</span>
+    </div>
+  </div>
+</section>
+
+<div class="film">
+  <div class="wrap film-grid">
+    <div class="rv">
+      <p class="eyebrow">Meet Hoku</p>
+      <h2>Twenty seconds<br>to fall for it.</h2>
+      <p class="lead">Tap Hoku for a hello, listen for three minutes, and watch your flower grow from Day 1 to Day 100.</p>
+      <div class="stores">
+        <a class="store light" href="https://sayitsoapp.com/get?c=web_film"><span><small>Free on iPhone &amp; Android</small><b>Get SayItSo</b></span></a>
+      </div>
+    </div>
+    <div class="vphone rv">
+      <video id="film" src="/assets/v2/sayitso-film.mp4" poster="/assets/v2/film-poster.jpg" muted loop playsinline autoplay preload="metadata"></video>
+      <button class="sound" id="sound" type="button">Sound on</button>
+    </div>
+  </div>
+</div>
+
+<section id="how" class="wrap">
+  <div class="feature">
+    <div class="copy rv">
+      <p class="eyebrow">Listen</p>
+      <h2>Three minutes.<br>One tiny friend.</h2>
+      <p class="lead">Hoku puts on his headphones and listens with you. A warm voice reads your affirmations, or record them in your own voice and hear yourself say it.</p>
+      <p style="margin:24px 0 0;font-weight:800;font-size:15px;color:var(--sub)">Tap to hear a voice</p>
+      <div class="voices" id="voices">
+        <button class="voice" data-v="heart"><i style="background:#FF8FAB">H</i>Heart<span class="eq"><b></b><b></b><b></b></span></button>
+        <button class="voice" data-v="michael"><i style="background:#6C8CF5">M</i>Michael<span class="eq"><b></b><b></b><b></b></span></button>
+        <button class="voice" data-v="ethan"><i style="background:#5BB7A6">E</i>Ethan<small>PREMIUM</small><span class="eq"><b></b><b></b><b></b></span></button>
+        <button class="voice" data-v="nicole"><i style="background:#B08CF2">N</i>Nicole<small>PREMIUM</small><span class="eq"><b></b><b></b><b></b></span></button>
+        <button class="voice" data-v="bella"><i style="background:#F5A65B">B</i>Bella<small>PREMIUM</small><span class="eq"><b></b><b></b><b></b></span></button>
+        <button class="voice" data-v="george"><i style="background:#7A8296">G</i>George<small>PREMIUM</small><span class="eq"><b></b><b></b><b></b></span></button>
+      </div>
+    </div>
+    <div class="shot blue rv"><img class="ph" src="/assets/v2/player.webp" alt="SayItSo player screen with Hoku wearing headphones"></div>
   </div>
 
-  <section class="block" id="how">
-    <p class="eyebrow">How it works</p>
-    <h2>Three tiny steps a day</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="num">1</div>
-        <h3>Pick your words</h3>
-        <p>Start with ready-made sets for money, work, love and sleep, or write your own.</p>
-        <div class="art" aria-hidden="true" style="flex-direction:column">
-          <div class="line-card">I welcome money with ease.</div>
-          <div class="line-card">Even small progress counts.</div>
-          <div class="line-card">I speak to myself with kindness.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="num">2</div>
-        <h3>Listen</h3>
-        <p>Hear them in a calm voice, or record them in your own. Add rain or waves if you like.</p>
-        <div class="art" aria-hidden="true"><div style="width:130px"><svg viewBox="2 0 116 116" role="img" aria-label="Hoku wearing headphones" style="display:block;width:100%;height:auto"><ellipse cx="22" cy="96" rx="12" ry="7" transform="rotate(-28 22 96)" fill="#C6BEE6"/><ellipse cx="98" cy="96" rx="12" ry="7" transform="rotate(28 98 96)" fill="#C6BEE6"/>
-<ellipse cx="60" cy="66" rx="46" ry="44" fill="#DCD5F2"/>
-<ellipse cx="40" cy="40" rx="9" ry="5" transform="rotate(-20 40 40)" fill="#FFFFFF" opacity=".55"/>
-<circle cx="42" cy="62" r="10" fill="#403A66"/>
-<circle cx="45.5" cy="57.5" r="3.8" fill="#FFFFFF"/>
-<circle cx="78" cy="62" r="10" fill="#403A66"/>
-<circle cx="81.5" cy="57.5" r="3.8" fill="#FFFFFF"/>
-<ellipse cx="26" cy="76" rx="8" ry="5" fill="#FFB3C7"/>
-<ellipse cx="94" cy="76" rx="8" ry="5" fill="#FFB3C7"/>
-<ellipse cx="53.5" cy="79" rx="9" ry="7" fill="#FFFFFF"/>
-<ellipse cx="66.5" cy="79" rx="9" ry="7" fill="#FFFFFF"/>
-<ellipse cx="60" cy="73" rx="4.6" ry="3.3" fill="#403A66"/>
-<path d="M55.5 84 q2.25 2.6 4.5 0 q2.25 2.6 4.5 0" stroke="#403A66" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M60 24 V12" stroke="#3E9E6C" stroke-width="4" stroke-linecap="round"/><ellipse cx="51" cy="11" rx="10" ry="5.5" transform="rotate(-28 51 11)" fill="#5DC08C"/><ellipse cx="69" cy="11" rx="10" ry="5.5" transform="rotate(28 69 11)" fill="#5DC08C"/><path d="M15 64 a45 47 0 0 1 90 0" stroke="#5A6FD6" stroke-width="7" fill="none" stroke-linecap="round"/><rect x="5" y="55" width="18" height="28" rx="9" fill="#5A6FD6"/><rect x="97" y="55" width="18" height="28" rx="9" fill="#5A6FD6"/></svg></div></div>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <h3>Water your flower</h3>
-        <p>Every day you listen, your little plant grows. Hoku (that’s “star” in Hawaiian) cheers you on the whole way.</p>
-        <div class="art" aria-hidden="true"><img src="/assets/mongle-garden.png" alt="" style="height:100%;width:auto;max-width:100%"></div>
-      </div>
+  <div class="feature flip">
+    <div class="copy rv">
+      <p class="eyebrow">Grow</p>
+      <h2>Grow a flower<br>in 100 days.</h2>
+      <p class="lead">Every day you listen, your plant gets a little taller. Miss a day and it droops a bit, then perks right back up when you return.</p>
+      <div class="chips"><span>Day 1 · Seed</span><span>Day 7 · Sprout</span><span>Day 50 · Bud</span><span class="on">Day 100 · Bloom</span></div>
     </div>
-  </section>
+    <div class="live rv" id="grow" aria-label="A flower growing from Day 1 to Day 100 as you scroll">
+      <div class="hill1"></div><div class="hill2"></div>
+      <div class="day" id="dayChip">Day 1</div>
+      <svg class="plant" id="plant" viewBox="-5 -62 210 214"></svg>
+      <img class="mini" src="/assets/v2/hoku.svg" alt="">
+      <div class="hint2">Scroll to grow ↓</div>
+    </div>
+  </div>
 
-  <section class="block" id="garden">
-    <div class="garden">
-      <div>
-        <p class="eyebrow" style="color:#C9C3E8">100 days to bloom</p>
-        <h2>A streak that forgives you</h2>
-        <p>Miss a day and your flower wilts a little. Come back and it perks right up. Rest days cover you when life gets busy.</p>
-        <div class="stages"><span>Day 1 · Seed</span><span>Day 7 · Sprout</span><span>Day 21 · Leaves</span><span>Day 50 · Bud</span><span>Day 100 · Flower</span></div>
-      </div>
-      <img src="/assets/mongle-garden.png" alt="Hoku sitting next to a growing plant">
+  <div class="feature">
+    <div class="copy rv">
+      <p class="eyebrow">Collect</p>
+      <h2>Pick your flower.<br>Grow your garden.</h2>
+      <p class="lead">Choose from four flowers, each with its own set of affirmations. Every bloom joins your garden, ready to share as a story card. Your words always stay private.</p>
+      <div class="pick" id="pick"><button class="on" data-k="bloom">Puffbloom</button><button data-k="sun">Sunflower</button><button data-k="rose">Rose</button><button data-k="lavender">Lavender</button></div>
     </div>
-  </section>
+    <div class="live rv" id="garden" style="background:linear-gradient(180deg,#FFC9DA,#FFE3EC 50%,#F3EEFF)">
+      <div class="hill1"></div><div class="hill2"></div>
+      <svg class="plant" id="pickPlant" viewBox="-5 -62 210 214"></svg>
+      <div class="day done" id="pickName">Puffbloom</div>
+    </div>
+  </div>
 
-  <section class="block" id="challenge">
-    <p class="eyebrow">New Year, 100 days</p>
-    <h2>Plant it on New Year's Day.<br>Watch it bloom in spring.</h2>
-    <div class="ny">
-      <div class="date"><b>Jan 1</b><span>Plant your seed</span></div>
-      <div class="arrow">100 days of<br>saying it out loud →</div>
-      <div class="date"><b>Apr 10</b><span>Your flower blooms</span></div>
+  <div class="feature flip">
+    <div class="copy rv">
+      <p class="eyebrow">Make it yours</p>
+      <h2>Your photo.<br>Your home screen.</h2>
+      <p class="lead">Listen with a photo of what you wish for <span class="premium">PREMIUM</span>, and keep Hoku and today's affirmation on your home screen with widgets.</p>
+      <div class="chips"><span>Photo backgrounds</span><span>Home screen widgets</span><span>Rain, waves &amp; forest</span></div>
     </div>
-    <span class="tag">#SayItSo100</span>
-  </section>
+    <div class="shot warm rv"><div class="duo"><img src="/assets/v2/photo.webp" alt="Listening with a sunset photo"><img src="/assets/v2/widget.webp" alt="SayItSo widgets on a home screen"></div></div>
+  </div>
+</section>
 
-  <section class="block" id="pricing">
-    <p class="eyebrow">Pricing</p>
-    <h2>Try everything free for 7 days.</h2>
-    <div class="plans">
-      <div class="plan">
-        <h3>Free</h3>
-        <div class="price">The basics, to get started</div>
-        <ul>
-          <li>Your 100-day flower and streak</li>
-          <li>Record affirmations in your own voice</li>
-          <li>2 sets with up to 10 affirmations each</li>
-          <li>Heart and Michael voices, plus daily reminders</li>
-          <li>1 rest day, and no ads</li>
-        </ul>
-      </div>
-      <div class="plan pro">
-        <h3>Premium</h3>
-        <div class="price">$39.99/year with a 7-day free trial · $7.99/month · $99.99 lifetime</div>
-        <ul>
-          <li>Unlimited sets and affirmations</li>
-          <li>Keep listening with your screen off or in other apps</li>
-          <li>Listen while you work: landscape and a clean focus view</li>
-          <li>Set your own pause between affirmations</li>
-          <li>Every SayItSo voice: Ethan, Nicole, Bella, George</li>
-          <li>Sleep timer for bedtime listening</li>
-          <li>A photo of what you wish for, on each set</li>
-          <li>Background sounds: rain, forest, waves, soft hum</li>
-          <li>Keep up to 2 rest days</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<section class="wrap center" style="padding-top:0">
+  <p class="eyebrow rv">Small habit, big heart</p>
+  <h2 class="rv">Built for every day.</h2>
+  <div class="numbers">
+    <div class="num rv"><b>3</b><span>minutes a day</span></div>
+    <div class="num rv"><b>100</b><span>days to bloom</span></div>
+    <div class="num rv"><b>4</b><span>flowers to grow</span></div>
+    <div class="num rv"><b>0</b><span>ads, ever</span></div>
+  </div>
+</section>
 
-  <section class="block" id="faq">
-    <p class="eyebrow" style="text-align:center">FAQ</p>
-    <h2 style="text-align:center">Questions</h2>
-    <div class="faq">
-      <details><summary>When can I download it?</summary><p>Now. SayItSo is free on the <a href="https://apps.apple.com/app/id6831498348">App Store</a> and <a href="https://play.google.com/store/apps/details?id=com.miraenangdok.app">Google Play</a>.</p></details>
-      <details><summary>What can I do for free?</summary><p>For free you get 2 sets with up to 10 affirmations each, the Heart and Michael voices, your own voice, reminders and your 100-day flower, with no ads. Listening with your screen off, unlimited sets, every voice, the sleep timer, focus view and background sounds are part of Premium, which comes with a 7-day free trial.</p></details>
-      <details><summary>Does it really work?</summary><p>SayItSo is a tool for a small, kind daily habit. Saying encouraging words out loud can feel good, but it doesn't promise any particular result.</p></details>
-      <details><summary>Who makes SayItSo?</summary><p>QUIETCOVE, a tiny independent studio. Questions? <span style="user-select:all;font-weight:700">support@sayitsoapp.com</span></p></details>
-    </div>
-  </section>
+<section id="challenge" class="wrap center" style="padding-top:0">
+  <p class="eyebrow rv">New Year, 100 days</p>
+  <h2 class="rv">Plant it on New Year's Day.<br>Watch it bloom in spring.</h2>
+  <div class="ny">
+    <div class="date rv"><b>Jan 1</b><span>Plant your seed</span></div>
+    <div class="arrow rv">100 days of saying it →</div>
+    <div class="date bloom rv"><b>Apr 10</b><span>Your flower blooms</span></div>
+  </div>
+  <span class="tag rv">#SayItSo100</span>
+</section>
 
-  <div class="final">
-    <div class="left">
-      <img src="/assets/sayitso-icon.png" alt="SayItSo app icon">
-      <div><h2>Hoku is saving you a seat.</h2><p style="margin:6px 0 0;color:var(--sub)">Free on iPhone and Android.</p></div>
+<section id="pricing" class="wrap center" style="padding-top:0">
+  <p class="eyebrow rv">Pricing</p>
+  <h2 class="rv">Start free. Go further<br>with Premium.</h2>
+  <p class="lead rv">Try every Premium feature free for 7 days. No ads on any plan.</p>
+  <div class="plans">
+    <div class="plan rv">
+      <h3>Free</h3>
+      <div class="price">Everything you need to start</div>
+      <ul>
+        <li>Your 100-day flower and streak</li>
+        <li>2 sets with up to 10 affirmations each</li>
+        <li>Heart and Michael voices, plus your own voice</li>
+        <li>Daily reminders and home screen widgets</li>
+        <li>1 rest day, and no ads</li>
+      </ul>
     </div>
-    <div class="cta" style="margin-top:0">
-      <a class="btn primary" href="https://apps.apple.com/app/id6831498348">App Store</a>
-      <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.miraenangdok.app">Google Play</a>
+    <div class="plan pro rv">
+      <h3>Premium</h3>
+      <div class="price">$39.99/year with a 7-day free trial · $7.99/month · $99.99 lifetime</div>
+      <ul>
+        <li>Unlimited sets and affirmations</li>
+        <li>Every voice: Ethan, Nicole, Bella, George</li>
+        <li>A photo of what you wish for, on each set</li>
+        <li>Background sounds: rain, forest, waves, soft hum</li>
+        <li>Sleep timer and listening with your screen off</li>
+        <li>Focus view, landscape, and your own pause length</li>
+        <li>Keep up to 2 rest days</li>
+      </ul>
     </div>
+  </div>
+</section>
+
+<section id="faq" class="wrap center" style="padding-top:0">
+  <p class="eyebrow rv">FAQ</p>
+  <h2 class="rv">Questions</h2>
+  <div class="faq">
+    <details><summary>When can I download it?</summary><p>Now. SayItSo is free on the <a href="https://apps.apple.com/app/id6831498348">App Store</a> and <a href="https://play.google.com/store/apps/details?id=com.miraenangdok.app">Google Play</a>.</p></details>
+    <details><summary>What can I do for free?</summary><p>For free you get 2 sets with up to 10 affirmations each, the Heart and Michael voices, your own voice, reminders, widgets and your 100-day flower, with no ads. Unlimited sets, every voice, photo backgrounds, background sounds, the sleep timer, focus view and listening with your screen off are part of Premium, which comes with a 7-day free trial.</p></details>
+    <details><summary>Does it really work?</summary><p>SayItSo is a tool for a small, kind daily habit. Saying encouraging words out loud can feel good, but it doesn't promise any particular result.</p></details>
+    <details><summary>Are my affirmations private?</summary><p>Yes. Your recordings never leave your phone, and shared garden cards show only your flowers and streak, never your words.</p></details>
+    <details><summary>Who makes SayItSo?</summary><p>QUIETCOVE, a small independent studio. Questions? <span style="user-select:all;font-weight:800">support@sayitsoapp.com</span></p></details>
+  </div>
+</section>
+
+<div class="final">
+  <span class="spark" style="left:8%;top:18%">✦</span><span class="spark" style="left:20%;top:70%;animation-delay:1s">✦</span><span class="spark" style="right:12%;top:24%;animation-delay:2s">✦</span><span class="spark" style="right:22%;top:76%;animation-delay:.5s">✦</span>
+  <img class="icon rv" src="/assets/sayitso-icon.png" alt="SayItSo app icon">
+  <h2 class="rv">Hoku is saving you a seat.</h2>
+  <p class="rv">Affirmations, but cute. Free on iPhone and Android.</p>
+  <div class="stores rv">
+    <a class="store light" href="https://apps.apple.com/app/id6831498348"><svg viewBox="0 0 24 24" fill="#1E1B39" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.3.8 1.4 0 2.3-1.2 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.8-1-2.8-4.1zM13.9 5.1c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.5-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.5 3.1-1.4z"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+    <a class="store light" href="https://play.google.com/store/apps/details?id=com.miraenangdok.app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2l10.5 10.5L3.6 23.2c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z" fill="#4FC3F7"/><path d="M17.6 9.2l-3.5 3.5L3.6 2.2c.2-.1.5-.2.8-.1.3 0 .5.1.8.2l12.4 6.9z" fill="#69F0AE"/><path d="M17.6 16.2L5.2 23.1c-.3.1-.5.2-.8.2-.3 0-.6 0-.8-.1l10.5-10.5 3.5 3.5z" fill="#FF5252"/><path d="M21 12.7c0 .5-.3 1-.8 1.3l-2.6 1.5-3.5-3.5 3.5-3.5 2.6 1.5c.5.3.8.8.8 1.3v1.4z" fill="#FFD740"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
   </div>
 </div>
 
@@ -269,10 +507,124 @@
   <div class="wrap">
     <div class="row">
       <span><b style="color:var(--ink)">SayItSo</b> by QUIETCOVE Inc.</span>
-      <span style="display:flex;flex-wrap:wrap;gap:8px 22px"><a href="https://quietcove.co.kr/sayitso/privacy/">Privacy</a><a href="https://quietcove.co.kr/sayitso/terms/">Terms</a><span>support@sayitsoapp.com</span><span>© 2026 QUIETCOVE Inc.</span></span>
+      <span style="display:flex;flex-wrap:wrap;gap:8px 22px"><a href="https://quietcove.co.kr/sayitso/privacy/">Privacy</a><a href="https://quietcove.co.kr/sayitso/terms/">Terms</a><a href="https://www.instagram.com/sayitso.app/">Instagram</a><a href="https://www.youtube.com/@sayitsoapp">YouTube</a><span>support@sayitsoapp.com</span><span>© 2026 QUIETCOVE Inc.</span></span>
     </div>
     <div style="margin-top:10px;font-size:13px">QUIETCOVE Inc. (주식회사 콰이어트코브) · Business registration 680-88-03311 · 30 Nonhyeon-ro 10-gil, 505-J15, Gangnam-gu, Seoul, Republic of Korea</div>
   </div>
 </footer>
+
+<script src="/assets/v2/js/art2.js"></script>
+<script src="/assets/v2/js/grow.js"></script>
+<script src="/assets/v2/js/hq.js"></script>
+<script src="/assets/v2/js/flat.js"></script>
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('solid',window.scrollY>20)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('in')}) }
+  var lines=['Just 3 minutes together today?','Hehe, that tickles!','Your flower is growing!','You’ve got this.'],i=0,say=document.getElementById('say');
+  setInterval(function(){if(tapped)return;say.style.opacity=0;setTimeout(function(){i=(i+1)%lines.length;say.textContent=lines[i];say.style.opacity=1},400)},3200);
+  // --- tap Hoku ---
+  var REACT=[{m:'wink',say:'Just 3 minutes together today?'},{m:'love',fx:'♥',col:'#FF7FA3'},{m:'giggle',say:'Hehe, that tickles!'},{m:'joy',fx:'♪',col:'#7E8CF5'}],ri=0,tapped=false,ac=null;
+  var hk=document.getElementById('hk'),hb=document.getElementById('hokuBtn'),stage=document.getElementById('stage');
+  function pop(f){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();var o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime;o.frequency.setValueAtTime(f*1.8,t);o.frequency.exponentialRampToValueAtTime(f,t+.09);g.gain.setValueAtTime(.18,t);g.gain.exponentialRampToValueAtTime(.001,t+.16);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.18)}catch(e){}}
+  function face(m){if(window.hokuFlat)hk.innerHTML=hokuFlat(300,m).replace('width="300" height="300"','width="100%" height="100%"')}
+  hb.addEventListener('click',function(){
+    tapped=true;document.getElementById('tapHint').style.display='none';
+    var r=REACT[ri++%REACT.length];face(r.m);pop(700+ri%4*120);
+    hb.classList.remove('hop');void hb.offsetWidth;hb.classList.add('hop');
+    if(r.say){say.style.opacity=0;setTimeout(function(){say.textContent=r.say;say.style.opacity=1},150)}
+    if(r.fx){var w=hb.offsetWidth,l=hb.offsetLeft,t=hb.offsetTop;for(var k=0;k<5;k++){(function(k){var e=document.createElement('span');e.className='fx';e.textContent=r.fx;e.style.color=r.col;e.style.left=(l+w*(.1+.2*k))+'px';e.style.top=(t+w*.05-(k%2)*20)+'px';e.style.animationDelay=(k*.06)+'s';stage.appendChild(e);setTimeout(function(){e.remove()},1500)})(k)}}
+    clearTimeout(hb._t);hb._t=setTimeout(function(){face('happy')},2400);
+  });
+  // --- voices ---
+  var cur=null,curBtn=null;
+  document.querySelectorAll('.voice').forEach(function(btn){btn.addEventListener('click',function(){
+    if(cur){cur.pause();curBtn.classList.remove('playing');if(curBtn===btn){cur=null;return}}
+    cur=new Audio('/assets/v2/voices/'+btn.dataset.v+'.m4a');curBtn=btn;btn.classList.add('playing');
+    cur.onended=function(){btn.classList.remove('playing');cur=null};cur.play().catch(function(){btn.classList.remove('playing')});
+  })});
+  // --- scroll-grown flower ---
+  var grow=document.getElementById('grow'),plant=document.getElementById('plant'),chip=document.getElementById('dayChip'),lastDay=-1,ticking=false;
+  function drawGrow(){ticking=false;if(!window.growPlant)return;var r=grow.getBoundingClientRect(),vh=window.innerHeight;
+    var p=Math.min(1,Math.max(0,(vh*.9-r.top)/(r.height+vh*.35)));var day=Math.max(1,Math.round(1+99*Math.pow(p,1.2)));
+    if(day===lastDay)return;lastDay=day;
+    plant.innerHTML=growPlant('bloom',day,{bloom:day>=100?1:.001,fit:false,fx:true});
+    chip.textContent='Day '+day;chip.classList.toggle('done',day>=100)}
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(drawGrow)}},{passive:true});
+  // --- flower picker ---
+  var pp=document.getElementById('pickPlant'),pn=document.getElementById('pickName'),anim=null;
+  function bloomIn(k){if(!window.growPlant)return;var t0=performance.now();cancelAnimationFrame(anim);
+    (function step(now){var x=Math.min(1,(now-t0)/900),e=1-Math.pow(1-x,3);pp.innerHTML=growPlant(k,100,{bloom:Math.max(.001,e),fit:false,fx:true});if(x<1)anim=requestAnimationFrame(step)})(t0)}
+  document.querySelectorAll('#pick button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('#pick button').forEach(function(x){x.classList.toggle('on',x===b)});pn.textContent=b.textContent;bloomIn(b.dataset.k)})});
+  window.addEventListener('load',function(){drawGrow();if(window.growPlant)pp.innerHTML=growPlant('bloom',100,{bloom:1,fit:false,fx:true})});
+  // --- intro: Hoku runs in, logo pops, tap to enter ---
+  (function(){
+    var intro=document.getElementById('intro');if(!intro)return;
+    var seen=false;try{seen=sessionStorage.getItem('sis_intro')==='1'}catch(e){}
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function enterSound(){try{var C=window.AudioContext||window.webkitAudioContext;if(!C)return;var c=new C(),t=c.currentTime,out=c.createGain();out.gain.value=.5;out.connect(c.destination);
+      [[1046.5,0],[1568,.09],[2093,.18]].forEach(function(n){var o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.value=n[0];g.gain.setValueAtTime(0,t+n[1]);g.gain.linearRampToValueAtTime(.22,t+n[1]+.01);g.gain.exponentialRampToValueAtTime(.001,t+n[1]+1.1);o.connect(g);g.connect(out);o.start(t+n[1]);o.stop(t+n[1]+1.2)});
+      var len=c.sampleRate*.7,buf=c.createBuffer(1,len,c.sampleRate),d=buf.getChannelData(0);for(var i=0;i<len;i++){var k=i/len;d[i]=(Math.random()*2-1)*Math.sin(Math.PI*k)*Math.sin(Math.PI*k)}
+      var ns=c.createBufferSource(),bp=c.createBiquadFilter(),ng=c.createGain();ns.buffer=buf;bp.type='bandpass';bp.Q.value=.8;bp.frequency.setValueAtTime(600,t);bp.frequency.exponentialRampToValueAtTime(3200,t+.6);ng.gain.value=.18;ns.connect(bp);bp.connect(ng);ng.connect(out);ns.start(t+.05)}catch(e){}}
+    function close(){if(intro.classList.contains('gone'))return;enterSound();intro.classList.add('gone');document.body.classList.remove('lock');try{sessionStorage.setItem('sis_intro','1')}catch(e){}setTimeout(function(){intro.remove()},1150)}
+    if(seen||reduce){intro.remove();return}
+    document.body.classList.add('lock');
+    var st=document.getElementById('istars');for(var i=0;i<40;i++){var x=document.createElement('i');x.style.left=(Math.random()*100)+'%';x.style.top=(Math.random()*62)+'%';x.style.opacity=(.3+Math.random()*.6);x.style.animationDelay=(Math.random()*3)+'s';st.appendChild(x)}
+    var hk=document.getElementById('ihoku'),rf=document.getElementById('irefl'),sh=document.getElementById('ishadow'),logo=document.getElementById('ilogo'),tag=document.getElementById('itag'),rays=document.getElementById('irays');
+    var RUN=2.4,t0=null,landed=false,lastHop=-1;
+    function draw(size,mood,fl,fr){return window.hokuFlat?hokuFlat(size,mood,{flipL:fl,flipR:fr}):''}
+    function frame(now){
+      if(t0===null)t0=now;var t=(now-t0)/1000;
+      var W=innerWidth,H=innerHeight;var p=Math.min(1,t/RUN),e=p*p*(3-2*p);
+      var big=Math.min(W*(W<700?.7:.36),H*.42);
+      var size=big*(0.05+0.95*Math.pow(e,1.5));
+      var floorY=H*0.66,groundY=floorY+(H*0.9-floorY)*e;
+      var hop=0,sq=1,fl=0,fr=0,wob=0,mood='joy';
+      if(p<1){var ph=(t%0.19)/0.19;hop=Math.sin(ph*Math.PI)*size*0.18;sq=ph<.14||ph>.86?0.88:1.05;fl=Math.sin(t*42)*30;fr=Math.sin(t*42+Math.PI)*30;wob=Math.sin(t*21)*6;
+        var n=Math.floor(t/0.19);if(n!==lastHop){lastHop=n;
+          var pf=document.createElement('div');pf.className='trail';var ps=size*.22;pf.style.width=ps+'px';pf.style.height=ps*.5+'px';pf.style.left=(W/2-ps/2+(n%2?size*.22:-size*.22))+'px';pf.style.top=(groundY-ps*.25)+'px';intro.appendChild(pf);setTimeout(function(){pf.remove()},600);
+          if(n%2===0&&p<.9){var d=document.createElement('div');d.className='do';d.textContent='do';d.style.fontSize=Math.max(13,size*.2)+'px';d.style.left=(W/2+(n%4?size*.55:-size*.85))+'px';d.style.top=(groundY-size*1.1)+'px';intro.appendChild(d);setTimeout(function(){d.remove()},700)}}
+      } else {var lt=t-RUN;if(!landed){landed=true;boom(W,H,groundY,size)}
+        sq=lt<.22?1-.16*Math.sin(lt/.22*Math.PI):1;fl=Math.sin(lt*7)*12;fr=-fl;mood=lt<1.1?'joy':'happy';hop=lt>.3?Math.abs(Math.sin((lt-.3)*3))*size*.025:0}
+      var svg=draw(size,mood,fl,fr);hk.innerHTML=svg;rf.innerHTML=svg;
+      var tf='translate('+(W/2-size/2)+'px,'+(groundY-size*0.93-hop)+'px) rotate('+wob+'deg) scale('+(2-sq)+','+sq+')';
+      hk.style.transformOrigin=rf.style.transformOrigin='50% 92%';hk.style.width=hk.style.height=size+'px';rf.style.width=rf.style.height=size+'px';
+      hk.style.transform=tf;
+      rf.style.transform='translate('+(W/2-size/2)+'px,'+(groundY-size*0.07+hop)+'px) scale('+(2-sq)+','+(-sq)+')';rf.style.transformOrigin='50% 50%';
+      var sw=size*.8*(1-hop/(size*.6+1));sh.style.width=sw+'px';sh.style.height=sw*.18+'px';sh.style.transform='translate('+(W/2-sw/2)+'px,'+(groundY-sw*.09)+'px)';
+      tag.style.top=(logo.offsetTop+logo.offsetHeight+10)+'px';
+      if(!intro.classList.contains('gone'))requestAnimationFrame(frame);
+    }
+    function boom(W,H,gy,size){
+      intro.classList.add('boom');logo.classList.add('pop');
+      [].forEach.call(logo.querySelectorAll('span'),function(sp,i){sp.style.animationDelay=(i*.045)+'s'});
+      var cy=logo.offsetTop+logo.offsetHeight*.55;rays.style.top=(cy-0.6*Math.max(W,H))+'px';
+      for(var r=0;r<3;r++){(function(r){setTimeout(function(){var R=Math.max(W,H)*(.7+.25*r),g=document.createElement('div');g.className='ring';g.style.width=g.style.height=R+'px';g.style.left=(W/2-R/2)+'px';g.style.top=(cy-R/2)+'px';intro.appendChild(g);setTimeout(function(){g.remove()},1050)},r*120)})(r)}
+      var cols=['#FFFFFF','#FFD3E0','#FFE89A','#BFE1FF','#D9CCFF'];
+      for(var i=0;i<46;i++){(function(i){var c=document.createElement('div');var star=i%3===0;c.className=star?'spk':'conf';
+        if(star){c.textContent='✦';c.style.fontSize=(14+Math.random()*22)+'px';c.style.color=cols[i%cols.length]}
+        else{var sz=6+Math.random()*8;c.style.width=sz+'px';c.style.height=sz+'px';c.style.borderRadius=i%2?'50%':'2px';c.style.background=cols[i%cols.length]}
+        c.style.left=W/2+'px';c.style.top=cy+'px';intro.appendChild(c);
+        var a=Math.random()*Math.PI*2,sp=180+Math.random()*Math.max(W,H)*.45,vx=Math.cos(a)*sp,vy=Math.sin(a)*sp*.7-120,rr=Math.random()*540,s0=performance.now();
+        (function f(now){var k=(now-s0)/1000;if(k>1.8){c.remove();return}var dmp=1-Math.exp(-k*3);c.style.transform='translate('+(vx*dmp)+'px,'+(vy*dmp+120*k*k)+'px) rotate('+(rr*k)+'deg)';c.style.opacity=String(1-k/1.8);requestAnimationFrame(f)})(s0)})(i)}
+      setTimeout(function(){intro.classList.add('ready')},500);
+    }
+    requestAnimationFrame(frame);
+    intro.addEventListener('click',function(e){if(e.target.id==='iskip'||landed)close()});
+    document.getElementById('iskip').addEventListener('click',function(e){e.stopPropagation();close()});
+    intro.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='Escape')close()});
+    window.addEventListener('wheel',function(){if(landed)close()},{passive:true});
+  })();
+  var v=document.getElementById('film'),b=document.getElementById('sound');
+  b.addEventListener('click',function(){v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play()}b.textContent=v.muted?'Sound on':'Sound off'});
+})();
+</script>
 </body>
 </html>
